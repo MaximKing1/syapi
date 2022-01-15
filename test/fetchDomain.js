@@ -1,4 +1,4 @@
-const { Client } = require('../index.js');
+const { Client } = require('../index.ts');
 const api = new Client();
 
 api.fetchDomain("https://google.com").then(function (response) {
