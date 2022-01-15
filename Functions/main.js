@@ -47,6 +47,14 @@ class Client {
       const body = await response.text();
       return body;   
     } 
+
+    async DBSize() {
+        const response = await fetchapi(`https://phish.sinking.yachts/v2/dbsize`, {
+	        method: 'GET'
+        });
+      const body = await response.text();
+      return body;   
+    } 
 }
 
 module.exports.Client = Client;
