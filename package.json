@@ -1,6 +1,6 @@
 {
   "name": "syapi",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "SinkingYachts Phishing Domain API JavaScript Unofficial Wrapper - https://phish.sinking.yachts/docs",
   "main": "index.js",
   "scripts": {
@@ -13,5 +13,6 @@
   },
   "keywords": [
     "syapi", "phising", "discord", "discordbots"
-  ]
+  ],
+  "repository": "https://github.com/MaximKing1/syapi"
 }
