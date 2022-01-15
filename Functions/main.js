@@ -31,6 +31,14 @@ class Client {
         const body = await response.text();
         return body;
     }
+
+    async fetchAllDomains() {
+          const response = await fetchapi(`https://phish.sinking.yachts/v2/all`, {
+	         method: 'GET'
+          });
+        const body = await response.text();
+        return body;   
+    }
 }
 
 module.exports.Client = Client;
