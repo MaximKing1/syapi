@@ -28,3 +28,4 @@ api.fetchDomain("https://google.com").then(function (response) {
 });
 ```# syapi
 # syapi
+# syapi
