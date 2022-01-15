@@ -20,7 +20,7 @@ yarn add syapi
 ## Request Domain
 
 ```js
-const { Client } = require('../index.js');
+const { Client } = require('syapi');
 const api = new Client();
 
 api.fetchDomain("https://google.com").then(function (response) {
@@ -31,7 +31,7 @@ api.fetchDomain("https://google.com").then(function (response) {
 ## Fetch All Domains
 
 ```js
-const { Client } = require('../index.js');
+const { Client } = require('syapi');
 const api = new Client();
 
 api.fetchAllDomains().then(function (response) {
@@ -42,7 +42,7 @@ api.fetchAllDomains().then(function (response) {
 ## Fetch Recent Domains
 
 ```js
-const { Client } = require('../index.js');
+const { Client } = require('syapi');
 const api = new Client();
 
 api.fetchRecentDomains(10000).then(function (response) {
@@ -53,7 +53,7 @@ api.fetchRecentDomains(10000).then(function (response) {
 ## Fetch Database Size
 
 ```js
-const { Client } = require('../index.js');
+const { Client } = require('syapi');
 const api = new Client();
 
 api.DBSize().then(function (response) {
