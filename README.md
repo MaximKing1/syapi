@@ -26,7 +26,4 @@ const api = new Client();
 api.fetchDomain("https://google.com").then(function (response) {
     console.log(response);
 });
-```# syapi
-# syapi
-# syapi
-# syapi
+```
