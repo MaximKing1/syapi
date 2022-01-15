@@ -1,6 +1,6 @@
 {
   "name": "syapi",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "SinkingYachts Phishing Domain API JavaScript Unofficial Wrapper - https://phish.sinking.yachts/docs",
   "main": "index.js",
   "scripts": {

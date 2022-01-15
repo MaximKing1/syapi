@@ -39,6 +39,14 @@ class Client {
         const body = await response.text();
         return body;   
     }
+
+    async fetchRecentDomains(dt = 604800) {
+        const response = await fetchapi(`https://phish.sinking.yachts/v2/recent/${dt}`, {
+	        method: 'GET'
+        });
+      const body = await response.text();
+      return body;   
+    } 
 }
 
 module.exports.Client = Client;
