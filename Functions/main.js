@@ -1,0 +1,36 @@
+const fetchapi = (...args) => import('node-fetch').then(({
+  default: fetch
+}) => fetch(...args));
+
+function domain_from_url(url) {
+    var result
+    var match
+    if (match = url.match(/^(?:https?:\/\/)?(?:[^@\n]+@)?(?:www\.)?([^:\/\n\?\=]+)/im)) {
+        result = match[1]
+        if (match = result.match(/^[^\.]+\.(.+\..+)$/)) {
+            result = match[1]
+        }
+    }
+    return result
+}
+
+class Client {
+    constructor(apiKey = null) {
+        if (apiKey === null) {
+            // console.log("No API Key Provided (Some API Requests Require This)")
+        } else {
+            // console.log("API Key Provided")
+        }
+    }
+
+    async fetchDomain(domain) {
+        domain = domain_from_url(domain);
+            const response = await fetchapi(`https://phish.sinking.yachts/v2/check/${domain}`, {
+	          method: 'GET'
+          });
+        const body = await response.text();
+        return body;
+    }
+}
+
+module.exports.Client = Client;
